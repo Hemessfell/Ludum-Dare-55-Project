@@ -7,10 +7,10 @@ public class ChunkGenerator : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] chunks;
-    //AstarPath path;
+    AstarPath path;
     [SerializeField] private GameObject finalChunk;
     private ChunkManager chunkManager;
-    //private AstarData data;
+    private AstarData data;
     private Transform camPos;
 
 
@@ -23,19 +23,9 @@ public class ChunkGenerator : MonoBehaviour
     private void Start()
     {
         camPos = Camera.main.transform;
-        /*path = AstarPath.active;
-        data = path.data;*/
+        path = AstarPath.active;
+        data = path.data;
         chunkManager = FindObjectOfType<ChunkManager>();
-
-        /*for (int i = 0; i < numberOfGenerations; i++)
-        {
-            Mesh mesh = quad;
-            GameObject maskHolder = Instantiate(new GameObject(), transform.position + Vector3.down * i * chunkSize, Quaternion.identity);
-            MeshFilter filter = maskHolder.AddComponent<MeshFilter>();
-            filter.mesh = mesh;
-            maskHolder.AddComponent<MeshRenderer>().material = maskMaterial;
-            maskHolder.AddComponent<TilemapQuad>();
-        }*/
 
         for (int i = 0; i <= numberOfGenerations; i++)
         {
@@ -61,16 +51,16 @@ public class ChunkGenerator : MonoBehaviour
             }
         }
 
-       // path.Scan();
+        path.Scan();
     }
 
     void Update()
     {
        if (transform.position.x < camPos.position.x)
         {
-            transform.position = new Vector3(transform.position.x - chunkSize / 2, transform.position.y);
-            //data.gridGraph.center.x = transform.position.x;
-            //path.UpdateGraphs();
+            transform.position = new Vector3(transform.position.x + chunkSize / 2, transform.position.y);
+            data.gridGraph.center.x = transform.position.x;
+            AstarPath.UpdateGraph();
         }
     }
     
