@@ -10,22 +10,25 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private GameObject[] enemies;
 
+
     [SerializeField] private int numberOfEnemies;
+
+    [SerializeField] private float timeToSpawn;
 
     private void Awake()
     {
         chunk = transform.parent.gameObject;
-       
+        transform.SetParent(null);
     }
 
-    public void SpawnEnemy()
+    public IEnumerator SpawnEnemy()
     {
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            Transform _sp = spawnPoints[i];
+            Transform _sp = spawnPoints[Random.Range(0, spawnPoints.Length)];
             GameObject enemyChosen = enemies[Random.Range(0, enemies.Length)];
-            Instantiate(enemyChosen, _sp.position, enemyChosen.transform.rotation, chunk.transform);
-            enemyChosen.transform.SetParent(null);
+            Instantiate(enemyChosen, _sp.position, enemyChosen.transform.rotation, transform);
+            yield return new WaitForSeconds(timeToSpawn);
         }
     }
 }
