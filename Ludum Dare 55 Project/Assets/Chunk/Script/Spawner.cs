@@ -25,8 +25,7 @@ public class Spawner : MonoBehaviour
             Transform _sp = spawnPoints[i];
             GameObject enemyChosen = enemies[Random.Range(0, enemies.Length)];
             Instantiate(enemyChosen, _sp.position, enemyChosen.transform.rotation, chunk.transform);
-            /*if (enemyChosen.GetComponent<EnemyBase>() != null)
-                enemyChosen.GetComponent<EnemyBase>().chunk = chunk;*/
+            enemyChosen.transform.SetParent(null);
         }
     }
 }
