@@ -14,7 +14,7 @@ public class SpawnerManager : MonoBehaviour
             Debug.Log("salve");
             for(int i = 0; i < spawners.Length; i++)
             {
-                spawners[i].SpawnEnemy();
+                StartCoroutine(spawners[i].SpawnEnemy());
             }
         }
     }
