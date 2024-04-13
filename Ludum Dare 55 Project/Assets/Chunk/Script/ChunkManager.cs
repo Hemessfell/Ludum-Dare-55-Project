@@ -11,6 +11,8 @@ public class ChunkManager : MonoBehaviour
     [SerializeField]
     private float distance;
 
+    [SerializeField] WagonMovement wagon;
+
 
     void Start()
     {

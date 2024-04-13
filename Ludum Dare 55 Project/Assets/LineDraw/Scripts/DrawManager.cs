@@ -30,6 +30,9 @@ public class DrawManager : MonoBehaviour
             currentLine = Instantiate(linePrefab, _mousePos, Quaternion.identity);
 
         if (Input.GetMouseButton(0))
+        {
             currentLine.SetPostion(_mousePos);
+            AstarPath.UpdateGraph();
+        }
     } 
 }
