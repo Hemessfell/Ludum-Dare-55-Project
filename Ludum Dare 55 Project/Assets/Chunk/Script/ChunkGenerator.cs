@@ -7,10 +7,10 @@ public class ChunkGenerator : MonoBehaviour
 {
     [SerializeField]
     private GameObject[] chunks;
-    AstarPath path;
+    //AstarPath path;
     [SerializeField] private GameObject finalChunk;
     private ChunkManager chunkManager;
-    private AstarData data;
+    //private AstarData data;
     private Transform camPos;
 
 
@@ -23,8 +23,8 @@ public class ChunkGenerator : MonoBehaviour
     private void Start()
     {
         camPos = Camera.main.transform;
-        path = AstarPath.active;
-        data = path.data;
+        /*path = AstarPath.active;
+        data = path.data;*/
         chunkManager = FindObjectOfType<ChunkManager>();
 
         /*for (int i = 0; i < numberOfGenerations; i++)
@@ -49,27 +49,27 @@ public class ChunkGenerator : MonoBehaviour
 
                 GameObject temp;
                 if (i == 0)
-                    temp = Instantiate(chunks[chunksProb], new Vector3(transform.position.x - ((i + 2) * chunkSize), transform.position.y ), transform.rotation, chunkManager.transform);
+                    temp = Instantiate(chunks[chunksProb], new Vector3(transform.position.x + ((i + 2) * chunkSize), transform.position.y ), transform.rotation, chunkManager.transform);
                 else
-                    temp = Instantiate(chunks[chunksProb], new Vector3(transform.position.x - ((i + 2) * chunkSize), transform.position.y), transform.rotation, chunkManager.transform);
+                    temp = Instantiate(chunks[chunksProb], new Vector3(transform.position.x + ((i + 2) * chunkSize), transform.position.y), transform.rotation, chunkManager.transform);
                 chunkManager.chunks.Add(temp);
             }
             else if (i == numberOfGenerations)
             {
-                GameObject finalChunkGO = Instantiate(finalChunk, new Vector3(transform.position.x - ((i + 2) * chunkSize), transform.position.y), transform.rotation, chunkManager.transform);
+                GameObject finalChunkGO = Instantiate(finalChunk, new Vector3(transform.position.x + ((i + 2) * chunkSize), transform.position.y), transform.rotation, chunkManager.transform);
                 chunkManager.chunks.Add(finalChunkGO);
             }
         }
 
-        path.Scan();
+       // path.Scan();
     }
 
     void Update()
     {
-       if (transform.position.x > camPos.position.x)
+       if (transform.position.x < camPos.position.x)
         {
             transform.position = new Vector3(transform.position.x - chunkSize / 2, transform.position.y);
-            data.gridGraph.center.x = transform.position.x;
+            //data.gridGraph.center.x = transform.position.x;
             //path.UpdateGraphs();
         }
     }
