@@ -13,7 +13,7 @@ public class Line : MonoBehaviour
     private readonly List<Vector2> points = new List<Vector2>();
     void Start()
     {
-
+        edgeCollider.transform.position -= transform.position;
     }
 
     void Update()

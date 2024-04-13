@@ -17,7 +17,6 @@ public class DrawManager : MonoBehaviour
     void Start()
     {
         cam = Camera.main;
-        firstPosition = transform.position;
     }
 
     
