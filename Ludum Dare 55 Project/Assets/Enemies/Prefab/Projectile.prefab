@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 66814712124014975}
-  force: 300
+  force: 500
 --- !u!50 &66814712124014975
 Rigidbody2D:
   serializedVersion: 4

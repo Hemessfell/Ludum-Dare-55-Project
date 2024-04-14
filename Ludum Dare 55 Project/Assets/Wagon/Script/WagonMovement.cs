@@ -7,10 +7,10 @@ public class WagonMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Camera cam;
 
-    [SerializeField] private float speed;
+    public float Speed;
     void Start()
     {
-        rb.velocity = Vector2.right * speed;
+        rb.velocity = Vector2.right * Speed;
         cam.transform.position = transform.position;
     }
 

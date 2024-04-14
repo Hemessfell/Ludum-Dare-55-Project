@@ -8,8 +8,6 @@ public class Line : MonoBehaviour
     [SerializeField] private LineRenderer lineRenderer;
     [SerializeField] private EdgeCollider2D edgeCollider;
 
-    AIPath path;
-
     private readonly List<Vector2> points = new List<Vector2>();
     void Start()
     {

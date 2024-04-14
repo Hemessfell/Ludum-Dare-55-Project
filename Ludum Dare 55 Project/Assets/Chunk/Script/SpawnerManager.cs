@@ -5,15 +5,11 @@ using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
 {
-    [SerializeField]private WagonMovement wagon;
     [SerializeField] private Spawner[] spawners;
 
     [SerializeField] private BoxCollider2D boxCollider;
 
-    private void Awake()
-    {
-        wagon = transform.parent.GetComponent<WagonMovement>();
-    }
+
     private void OnTriggerEnter2D(Collider2D other)
 
     {
