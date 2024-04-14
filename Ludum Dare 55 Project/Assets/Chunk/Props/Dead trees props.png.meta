@@ -113,10 +113,10 @@ TextureImporter:
       name: Dead trees props_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 46
+        x: 4
+        y: 18
         width: 25
-        height: 35
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Dead trees props_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 76
+        x: 33
+        y: 62
         width: 57
-        height: 68
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: Dead trees props_2
       rect:
         serializedVersion: 2
-        x: 20
-        y: 11
+        x: 84
+        y: 2
         width: 28
-        height: 34
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +176,10 @@ TextureImporter:
       name: Dead trees props_3
       rect:
         serializedVersion: 2
-        x: 53
-        y: 11
+        x: 117
+        y: 3
         width: 23
-        height: 34
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
