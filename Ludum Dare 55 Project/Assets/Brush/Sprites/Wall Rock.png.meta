@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4ea7149e91fa3944aba08d76fe98bdea
+guid: 72c053ed8cc5a124faac9feab815d4f9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,76 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 3
-        width: 13
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e64bf596e5ab8cc46bdfc510139922c4
-      internalID: 64792887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 3
-        width: 13
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8eafbfb321e83ce46a407a9dce1da2d3
-      internalID: -2096927288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 3
-        width: 13
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4c5c9b4f1bd1c74e962d43834a946a4
-      internalID: 1459801973
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_3
+      name: Wall Rock_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 13
-        height: 22
+        y: 0
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f91d9e9787aaabd4e828830dd35be635
-      internalID: 2123245264
+      spriteID: 7770dd6d5f88a864db56da8969c777cf
+      internalID: -2035707383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_4
+      name: Wall Rock_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 3
-        width: 13
-        height: 22
+        x: 19
+        y: 0
+        width: 11
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbe30684e0e30314783a501283ffc2ca
-      internalID: 851362250
+      spriteID: 38ca1607cb21f3b4ebafcd5eddcaf95f
+      internalID: -2067384528
       vertices: []
       indices: 
       edges: []
@@ -225,11 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_0: 64792887
-      Idle_1: -2096927288
-      Idle_2: 1459801973
-      Idle_3: 2123245264
-      Idle_4: 851362250
+      Wall Rock_0: -2035707383
+      Wall Rock_1: -2067384528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
