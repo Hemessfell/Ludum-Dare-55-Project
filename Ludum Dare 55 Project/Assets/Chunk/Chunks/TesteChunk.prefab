@@ -6300,8 +6300,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d31ee323156bd847861b1c17d32c156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wagon: {fileID: 0}
   spawners:
   - {fileID: 3663261433528183495}
+  - {fileID: 4150037215957433681}
   boxCollider: {fileID: 517049005210178068}
 --- !u!61 &517049005210178068
 BoxCollider2D:
@@ -6398,11 +6400,11 @@ PrefabInstance:
     - target: {fileID: 7918278736326352007, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 6959487962833217411, guid: 59cefa8cd205cdb42bea9c0f1e8d57b4, type: 3}
+      objectReference: {fileID: 3388948564983131648, guid: c9f5eaae394a1524c9108155877b0cb6, type: 3}
     - target: {fileID: 7918278736326352007, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}
       propertyPath: enemies.Array.data[1]
       value: 
-      objectReference: {fileID: 6959487962833217411, guid: 59cefa8cd205cdb42bea9c0f1e8d57b4, type: 3}
+      objectReference: {fileID: 3388948564983131648, guid: c9f5eaae394a1524c9108155877b0cb6, type: 3}
     - target: {fileID: 7918278736326352007, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}
       propertyPath: spawnPoints.Array.size
       value: 2
@@ -6471,6 +6473,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8803602988055630332, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}
   m_PrefabInstance: {fileID: 6085634488007254486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4150037215957433681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7918278736326352007, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}
+  m_PrefabInstance: {fileID: 6085634488007254486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd7f31704b58d3439a4b927a9134843, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5773463737481714121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 318615367079147551, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}

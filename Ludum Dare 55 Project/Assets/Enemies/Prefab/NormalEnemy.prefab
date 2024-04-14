@@ -4953,13 +4953,13 @@ GameObject:
   - component: {fileID: 6959487962833217401}
   - component: {fileID: 2511918649960025000}
   - component: {fileID: -762072221122957}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NormalEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6959487962833217414
 Transform:
   m_ObjectHideFlags: 0
@@ -5090,7 +5090,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6959487962833217403
 MonoBehaviour:
   m_ObjectHideFlags: 0
