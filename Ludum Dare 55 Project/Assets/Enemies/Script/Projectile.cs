@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
     private void Awake()
     {
         target = FindObjectOfType<WagonMovement>();
+        Destroy(gameObject, 6f);
     }
     private void Start()
     {
@@ -20,7 +21,7 @@ public class Projectile : MonoBehaviour
     }
     private void ThorwItself()
     {
-        Vector2 direction = new Vector2(target.transform.position.x + (transform.position - target.transform.position).magnitude, target.transform.position.y) - new Vector2( transform.position.x,transform.position.y);
+        Vector2 direction = new Vector2(target.transform.position.x + ((transform.position - target.transform.position).magnitude/ force * 200 *(target.Speed/3)), target.transform.position.y) - new Vector2( transform.position.x,transform.position.y);
         direction.Normalize();
         rb.AddForce(direction * force);
     }
