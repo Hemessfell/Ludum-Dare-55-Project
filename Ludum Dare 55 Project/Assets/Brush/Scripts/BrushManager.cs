@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +20,8 @@ public class BrushManager : MonoBehaviour
     public States myState { get; private set; }
 
     [SerializeField] private ManaFill mana;
+
+    private bool isPaiting;
     private void Awake()
     {
         lineRenderer = line.GetComponent<LineRenderer>();
@@ -32,16 +36,16 @@ public class BrushManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && !isPaiting)
         {
             SwitchState(States.Green);
         }
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && !isPaiting)
         {
             SwitchState(States.Yellow);
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !isPaiting)
         {
             SwitchState(States.Red);
         }
@@ -62,7 +66,7 @@ public class BrushManager : MonoBehaviour
                 if (Input.GetMouseButton(0))
                     MarkEnemy();
                 if (Input.GetMouseButtonUp(0))
-                    CastLightning();
+                    StartCoroutine(CastLightning());
                 return;
 
         }
@@ -98,12 +102,11 @@ public class BrushManager : MonoBehaviour
         Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D _hit;
         _hit = Physics2D.BoxCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), new Vector2(1, 0.625f), 0, Vector2.down, 0.1f, whatIsObstacle);
-
+        isPaiting = true;
         if (!_hit && !mana.reachedZero)
         {
             Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
             mana.DecreaseMana(greenMana);
-            //Instantiate(wall, new Vector3(Mathf.FloorToInt(mousePosition.x) + 0.5f, Mathf.RoundToInt(mousePosition.y), 0), Quaternion.identity, transform);
             GameObject _temp = Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
             wallList.Add(_temp);
         }
@@ -111,13 +114,15 @@ public class BrushManager : MonoBehaviour
 
     private IEnumerator ActiveWall()
     {
-            for (int i = 0; i < wallList.Count; i++)
-            {
-                wallList[i].transform.GetChild(0).gameObject.SetActive(true);
-                AstarPath.UpdateGraph();
-                yield return new WaitForSeconds(0.05f);
-            }
-            wallList.Clear();
+        isPaiting = false;
+        for (int i = 0; i < wallList.Count; i++)
+        {
+            wallList[i].transform.GetChild(0).gameObject.SetActive(true);
+            wallList[i].transform.GetChild(1).gameObject.transform.DOScale(new Vector3(0, 0, 0), 1);
+            AstarPath.UpdateGraph();
+            yield return new WaitForSeconds(0.05f);
+        }
+        wallList.Clear();
     }
 
     #endregion
@@ -129,12 +134,11 @@ public class BrushManager : MonoBehaviour
         Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D _hit;
         _hit = Physics2D.BoxCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), new Vector2(1, 0.625f), 0, Vector2.down, 0.1f, whatIsObstacle);
-
+        isPaiting = true;
         if (!_hit && !mana.reachedZero)
         {
             Instantiate(wall, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, transform);
             mana.DecreaseMana(greenMana);
-            //Instantiate(wall, new Vector3(Mathf.FloorToInt(mousePosition.x) + 0.5f, Mathf.RoundToInt(mousePosition.y), 0), Quaternion.identity, transform);
             GameObject _temp = Instantiate(wall, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, transform);
             wallList.Add(_temp);
         }
@@ -149,6 +153,7 @@ public class BrushManager : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
         wallList.Clear();
+        isPaiting = false;
     }
 
     #endregion
@@ -159,8 +164,8 @@ public class BrushManager : MonoBehaviour
         Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D _hit;
         _hit = Physics2D.CircleCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), radius, Vector2.down, 0.1f, whatIsEnemy);
-
-        if (_hit.collider && !mana.reachedZero)
+        isPaiting = true;
+        if (_hit.collider && !mana.reachedZero && !_hit.collider.transform.GetChild(0).gameObject.activeInHierarchy)
         {
             _hit.collider.transform.GetChild(0).gameObject.SetActive(true);
             mana.DecreaseMana(yellowMana);
@@ -168,13 +173,15 @@ public class BrushManager : MonoBehaviour
         }
 
     }
-    private void CastLightning()
+    private IEnumerator CastLightning()
     {
         for (int i = 0; i < enemyList.Count; i++)
         {
             enemyList[i].transform.GetChild(1).gameObject.SetActive(true);
+            yield return new WaitForSeconds(0.1f);
         }
         enemyList.Clear();
+        isPaiting = false;
     }
     #endregion
 
