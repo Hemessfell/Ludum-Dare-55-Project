@@ -25,4 +25,11 @@ public class Projectile : MonoBehaviour
         direction.Normalize();
         rb.AddForce(direction * force);
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Wagon"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
