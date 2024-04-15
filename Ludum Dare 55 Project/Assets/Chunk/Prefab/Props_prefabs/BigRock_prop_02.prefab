@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1368153202142683978}
   - component: {fileID: 3988572707863299698}
   - component: {fileID: 2506597186079376060}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: BigRock_prop_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2.625}
+    oldSize: {x: 2, y: 2.8125}
     newSize: {x: 2, y: 2.625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

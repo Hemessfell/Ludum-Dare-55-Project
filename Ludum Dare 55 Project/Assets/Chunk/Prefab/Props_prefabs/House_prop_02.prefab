@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4791940416977489419}
   - component: {fileID: 4556083092012390489}
   - component: {fileID: 1976337374699220655}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: House_prop_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 5, y: 7.75}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

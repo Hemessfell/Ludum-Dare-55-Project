@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5786914545524845814}
   - component: {fileID: 7466390181158785647}
   - component: {fileID: 867779710554414951}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Dead_tree_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.5625, y: 2.9375}
+    oldSize: {x: 1.5625, y: 3.1875}
     newSize: {x: 1.5625, y: 2.9375}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
