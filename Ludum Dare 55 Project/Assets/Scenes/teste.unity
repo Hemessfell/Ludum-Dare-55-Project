@@ -503,6 +503,17 @@ Transform:
   - {fileID: 71762996}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246286216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4696911526452367689, guid: f4be5daa58cf9d14fad766c64113a7a4, type: 3}
+  m_PrefabInstance: {fileID: 1576317533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac93d3dde4d19d24f9cdf91896e52a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &327082464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -620,9 +631,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line: {fileID: 438635264896121220, guid: ed5c276a3e2c51948a59b243d58c2561, type: 3}
   wall: {fileID: 236383180735172475, guid: 51d5ac08c2fc6bd4189fe7f4458a0fae, type: 3}
+  wallList: []
   whatIsObstacle:
     serializedVersion: 2
     m_Bits: 320
+  greenMana: 0.03
+  redMana: 0.02
+  yellowMana: 0.06
+  mana: {fileID: 246286216}
 --- !u!1 &468621467
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1425,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4696911526452367689, guid: f4be5daa58cf9d14fad766c64113a7a4, type: 3}
+      propertyPath: manaAmmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4965022262394947453, guid: f4be5daa58cf9d14fad766c64113a7a4, type: 3}
       propertyPath: m_Pivot.x
       value: 0

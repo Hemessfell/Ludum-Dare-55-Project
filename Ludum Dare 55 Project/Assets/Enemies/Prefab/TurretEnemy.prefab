@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6656130514516206922}
   - component: {fileID: 7952298609686351240}
   - component: {fileID: -664557857530083260}
-  - component: {fileID: -9011102070974058362}
   - component: {fileID: 432647540028322911}
   m_Layer: 8
   m_Name: TurretEnemy
@@ -101,8 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootInterval: 2
+  radius: 22.14
   projectile: {fileID: 881881306115855712, guid: 75c994f555a94cb419d327b545d9be0b, type: 3}
-  circleCollider2D: {fileID: -9011102070974058362}
+  circleCollider2D: {fileID: 0}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!50 &-664557857530083260
 Rigidbody2D:
   serializedVersion: 4
@@ -130,41 +133,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &-9011102070974058362
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3388948564983131648}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 30
 --- !u!95 &432647540028322911
 Animator:
   serializedVersion: 5
