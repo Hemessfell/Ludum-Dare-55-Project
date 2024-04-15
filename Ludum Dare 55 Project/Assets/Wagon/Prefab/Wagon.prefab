@@ -514,6 +514,7 @@ MonoBehaviour:
   life: 100
   anim: {fileID: 2985258726080113874}
   slider: {fileID: 8870594863507488276}
+  rb: {fileID: 8714045875137964129}
 --- !u!1 &7287050434964742464
 GameObject:
   m_ObjectHideFlags: 0
