@@ -6825,7 +6825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9006229886883171535, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.53
+      value: -11.107499
       objectReference: {fileID: 0}
     - target: {fileID: 9006229886883171535, guid: d9e13e1257cc34a458da9d83a6b63b87, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6984,6 +6984,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6683775644528473604}
     m_Modifications:
+    - target: {fileID: -6602503225927702697, guid: dab5ee97dd15c8045a52153d55fe6ccd, type: 3}
+      propertyPath: m_InstanceId
+      value: -743298
+      objectReference: {fileID: 0}
+    - target: {fileID: -6602503225927702697, guid: dab5ee97dd15c8045a52153d55fe6ccd, type: 3}
+      propertyPath: m_HasRenderer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 335301570746648392, guid: dab5ee97dd15c8045a52153d55fe6ccd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.2160106
@@ -7046,6 +7054,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6683775644528473604}
     m_Modifications:
+    - target: {fileID: -7553926361423870266, guid: 92b9147859ce3a5428b036f27d556e27, type: 3}
+      propertyPath: m_InstanceId
+      value: -743250
+      objectReference: {fileID: 0}
+    - target: {fileID: -7553926361423870266, guid: 92b9147859ce3a5428b036f27d556e27, type: 3}
+      propertyPath: m_HasRenderer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4064753388723443187, guid: 92b9147859ce3a5428b036f27d556e27, type: 3}
       propertyPath: m_Name
       value: House_prop_01 (1)
@@ -7108,6 +7124,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6683775644528473604}
     m_Modifications:
+    - target: {fileID: -7553926361423870266, guid: 92b9147859ce3a5428b036f27d556e27, type: 3}
+      propertyPath: m_InstanceId
+      value: -743288
+      objectReference: {fileID: 0}
+    - target: {fileID: -7553926361423870266, guid: 92b9147859ce3a5428b036f27d556e27, type: 3}
+      propertyPath: m_HasRenderer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4064753388723443187, guid: 92b9147859ce3a5428b036f27d556e27, type: 3}
       propertyPath: m_Name
       value: House_prop_01
@@ -7170,6 +7194,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6683775644528473604}
     m_Modifications:
+    - target: {fileID: -839006710629354654, guid: 260a1b07cff9ed742b00d73cbc1413e6, type: 3}
+      propertyPath: m_InstanceId
+      value: -743240
+      objectReference: {fileID: 0}
+    - target: {fileID: -839006710629354654, guid: 260a1b07cff9ed742b00d73cbc1413e6, type: 3}
+      propertyPath: m_HasRenderer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6606271277039529269, guid: 260a1b07cff9ed742b00d73cbc1413e6, type: 3}
       propertyPath: m_Name
       value: House_prop_02
@@ -7232,6 +7264,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6683775644528473604}
     m_Modifications:
+    - target: {fileID: -3482311276841437294, guid: 5aac3095c8e7c6540b091e745ed56fa6, type: 3}
+      propertyPath: m_InstanceId
+      value: -743278
+      objectReference: {fileID: 0}
+    - target: {fileID: -3482311276841437294, guid: 5aac3095c8e7c6540b091e745ed56fa6, type: 3}
+      propertyPath: m_HasRenderer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4500727206471628010, guid: 5aac3095c8e7c6540b091e745ed56fa6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9493941
