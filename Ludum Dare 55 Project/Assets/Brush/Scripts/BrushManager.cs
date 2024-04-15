@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +8,10 @@ public class BrushManager : MonoBehaviour
 {
     [SerializeField] private Line line;
     [SerializeField] private GameObject wall, lightining;
-    [SerializeField] private List<GameObject> wallList = new List<GameObject>();
+    private List<GameObject> wallList = new List<GameObject>();
+    private List<GameObject> enemyList = new List<GameObject>();
     [SerializeField] private LayerMask whatIsObstacle;
-    [SerializeField] private float greenMana, redMana, yellowMana;
+    [SerializeField] private float greenMana, redMana, yellowMana, radius;
     public enum States { Green, Red, Yellow }
     private Image manaColor;
     private LineRenderer lineRenderer;
@@ -48,15 +50,16 @@ public class BrushManager : MonoBehaviour
         {
 
             case States.Green:
-                if (Input.GetMouseButton(0) && !mana.reachedZero)
+                if (Input.GetMouseButton(0))
                     SpawnWall();
-                if (Input.GetMouseButtonUp(0)  && !mana.reachedZero)
+                if (Input.GetMouseButtonUp(0))
                     StartCoroutine(ActiveWall());
                 return;
 
             case States.Red:
                 return;
             case States.Yellow:
+
                 return;
 
         }
@@ -93,7 +96,7 @@ public class BrushManager : MonoBehaviour
         RaycastHit2D _hit;
         _hit = Physics2D.BoxCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), new Vector2(1, 0.625f), 0, Vector2.down, 0.1f, whatIsObstacle);
 
-        if (!_hit)
+        if (!_hit && !mana.reachedZero)
         {
             Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
             mana.DecreaseMana(greenMana);
@@ -123,12 +126,17 @@ public class BrushManager : MonoBehaviour
     #endregion
 
     #region YellowBrush
-
-    public void MarkEnemy(Transform transform)
+    private void MarkEnemy()
     {
-        Instantiate(lightining, transform.position, Quaternion.identity, transform);
+        Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D _hit;
+        _hit = Physics2D.CircleCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), radius, Vector2.down, 0.1f, whatIsObstacle);
+
+        if (_hit.collider && !mana.reachedZero)
+        {
+            _hit.collider.transform.GetChild(0).gameObject.SetActive(true);
+        }
     }
-
     #endregion
-
 }
+

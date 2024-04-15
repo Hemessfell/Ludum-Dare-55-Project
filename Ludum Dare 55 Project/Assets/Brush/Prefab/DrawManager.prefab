@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePrefab: {fileID: 438635264896121220, guid: ed5c276a3e2c51948a59b243d58c2561, type: 3}
+  mana: {fileID: 0}
+  manaIncreaseValue: 0.001
+  timeToIncrease: 1
 --- !u!114 &6513755370655642524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   line: {fileID: 438635264896121220, guid: ed5c276a3e2c51948a59b243d58c2561, type: 3}
   wall: {fileID: 6098439462553284387, guid: b87a3f30f7f5ebb4a9a0ef2c4b0d51c1, type: 3}
+  lightining: {fileID: 5567728445764771939, guid: 11e2b3bbdc690e94ea423a05d9aaa10a, type: 3}
   wallList: []
   whatIsObstacle:
     serializedVersion: 2
