@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 34
+        y: 51
         width: 25
-        height: 51
+        height: 34
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,9 +135,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 33
-        y: 79
+        y: 110
         width: 57
-        height: 96
+        height: 65
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 83
-        y: 24
+        y: 45
         width: 28
-        height: 53
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,9 +177,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 116
-        y: 23
+        y: 45
         width: 23
-        height: 54
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,6 +189,90 @@ TextureImporter:
       bones: []
       spriteID: 4e6156c0d2e275a4e9f8a4c6eaf5ea41
       internalID: 682245393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead trees props_4
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 79
+        width: 57
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2143ff786e78a11439c9afa481f9ff79
+      internalID: 1461422683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead trees props_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 35
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ffecc617e313843b664ab452ea0d69
+      internalID: 1248038674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead trees props_6
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 26
+        width: 28
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac80724cff6bce45b897d5fbc1ec5f0
+      internalID: -1517591259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dead trees props_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 23
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653615d95be0cd84b98883773833e031
+      internalID: 795345895
       vertices: []
       indices: 
       edges: []
@@ -208,6 +292,10 @@ TextureImporter:
       Dead trees props_1: -916079953
       Dead trees props_2: -848286693
       Dead trees props_3: 682245393
+      Dead trees props_4: 1461422683
+      Dead trees props_5: 1248038674
+      Dead trees props_6: -1517591259
+      Dead trees props_7: 795345895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

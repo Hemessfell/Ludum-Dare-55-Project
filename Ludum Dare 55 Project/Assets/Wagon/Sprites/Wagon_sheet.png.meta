@@ -114,11 +114,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 209
-        y: 16
+        y: 38
         width: 61
-        height: 59
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -135,11 +135,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 305
-        y: 16
+        y: 38
         width: 61
-        height: 59
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -156,11 +156,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 113
-        y: 16
+        y: 38
         width: 61
-        height: 59
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,11 +177,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 17
-        y: 16
+        y: 38
         width: 61
-        height: 59
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,6 +189,90 @@ TextureImporter:
       bones: []
       spriteID: 688f6138e0c34ba498fe5f815f11ea79
       internalID: -1048216128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wagon_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 16
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee2e4582c5fc8f4da6a6ec54b51aecb
+      internalID: 423676950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wagon_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 16
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd814ec6c3203d44a9290900117caed7
+      internalID: 1426828430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wagon_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 16
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a9a6e19ee19734da477dd0254eddc8
+      internalID: 1111981505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wagon_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 16
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b81a95409186764fa086faa46fdc35f
+      internalID: -1848839961
       vertices: []
       indices: 
       edges: []
@@ -208,6 +292,10 @@ TextureImporter:
       Wagon_sheet_1: -1048216128
       Wagon_sheet_2: 1800760801
       Wagon_sheet_3: 761394717
+      Wagon_sheet_4: 423676950
+      Wagon_sheet_5: 1426828430
+      Wagon_sheet_6: 1111981505
+      Wagon_sheet_7: -1848839961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

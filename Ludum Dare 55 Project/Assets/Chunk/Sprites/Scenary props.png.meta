@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 21
-        y: 49
+        y: 82
         width: 56
-        height: 86
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,9 +135,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 211
-        y: 99
+        y: 106
         width: 26
-        height: 30
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,9 +156,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 278
-        y: 97
+        y: 107
         width: 24
-        height: 31
+        height: 21
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,9 +177,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 84
+        y: 102
         width: 32
-        height: 45
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,9 +198,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 161
-        y: 86
+        y: 102
         width: 30
-        height: 43
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -219,9 +219,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 209
-        y: 62
+        y: 72
         width: 31
-        height: 33
+        height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,9 +240,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 275
-        y: 64
+        y: 73
         width: 29
-        height: 29
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,6 +252,153 @@ TextureImporter:
       bones: []
       spriteID: a232c7f0154ce6c4b95ec63f166cdb8c
       internalID: -2121208515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenary props_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 66
+        width: 56
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98afbb1877023304e9c53f55cb6779d5
+      internalID: -621288696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenary props_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 84
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8547257c5b921e945aa28818158115ff
+      internalID: 1562075533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenary props_9
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 86
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a571a767d95419642964a76063f3be6f
+      internalID: -882805973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenary props_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 99
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6978851d8745864387f74f373b5406d
+      internalID: 419755238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenary props_11
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 62
+        width: 31
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa706b93f67c8049b01ed59906e225d
+      internalID: 775179816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenary props_12
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 64
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220dc6261c833db44bc05c6333d626dd
+      internalID: -457002436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scenary props_13
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 97
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39d731cb3e39ab4cb44829d31e0fded
+      internalID: -479155397
       vertices: []
       indices: 
       edges: []
@@ -269,11 +416,18 @@ TextureImporter:
     nameFileIdTable:
       Scenary props_0: -1017050001
       Scenary props_1: 2130192130
+      Scenary props_10: 419755238
+      Scenary props_11: 775179816
+      Scenary props_12: -457002436
+      Scenary props_13: -479155397
       Scenary props_2: 911863787
       Scenary props_3: 220002677
       Scenary props_4: 1765674182
       Scenary props_5: 1083429925
       Scenary props_6: -2121208515
+      Scenary props_7: -621288696
+      Scenary props_8: 1562075533
+      Scenary props_9: -882805973
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
