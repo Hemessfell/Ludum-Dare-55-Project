@@ -271,7 +271,6 @@ GameObject:
   m_Component:
   - component: {fileID: 437060261}
   - component: {fileID: 437060260}
-  - component: {fileID: 437060262}
   m_Layer: 0
   m_Name: DrawManager
   m_TagString: Untagged
@@ -307,23 +306,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &437060262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 437060259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5f1df704c2477459ccf409447de6b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  line: {fileID: 438635264896121220, guid: ed5c276a3e2c51948a59b243d58c2561, type: 3}
-  wall: {fileID: 236383180735172475, guid: 51d5ac08c2fc6bd4189fe7f4458a0fae, type: 3}
-  whatIsObstacle:
-    serializedVersion: 2
-    m_Bits: 320
 --- !u!1 &648023284
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +741,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841fd536382c06f4190d599ad8fa0728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chunks: []
+  chunks:
+  - {fileID: 7277344504819483989, guid: aae8249207c9ea24fa4b2cf7f93e1265, type: 3}
+  - {fileID: 7277344504819483989, guid: 71746a98247798d45b6a86785a60aa28, type: 3}
+  - {fileID: 7277344504819483989, guid: 8016f75f5f13c6c4dbc49430a288bf81, type: 3}
+  - {fileID: 7277344504819483989, guid: 97670ff73c79da243b870d99b22cf90a, type: 3}
+  - {fileID: 7277344504819483989, guid: ab35876f902a9384bb03e097f88e8fd0, type: 3}
+  - {fileID: 7277344504819483989, guid: 5e138eda2fdbc474c830e7688b21a063, type: 3}
+  - {fileID: 7277344504819483989, guid: 760224d399f76a443ae9a0dd434bd224, type: 3}
+  - {fileID: 7277344504819483989, guid: d944d6240984e3c40b14829bc10d233d, type: 3}
+  - {fileID: 7277344504819483989, guid: 0af98fbc4e8d17944951a7ff26340d8c, type: 3}
+  - {fileID: 7277344504819483989, guid: 151ed308c63a2ab49adf5c48f7becc1d, type: 3}
+  - {fileID: 7277344504819483989, guid: e938cb18152ed0d4cabd864838c2167d, type: 3}
+  - {fileID: 7277344504819483989, guid: 34975283f03d1164d9162c39904cb837, type: 3}
+  - {fileID: 7277344504819483989, guid: 04d79ceda7df01e4ba0e6f66cb7701fd, type: 3}
+  - {fileID: 7277344504819483989, guid: 395897d0f8f98974590e7ff1f31ecad6, type: 3}
+  - {fileID: 7277344504819483989, guid: 60de33604c7c55540909c2033db27725, type: 3}
+  - {fileID: 7277344504819483989, guid: ef5d4799b9937ec42a8b2c71809f0eba, type: 3}
   activeChunks: []
   distance: 45
   wagon: {fileID: 0}
