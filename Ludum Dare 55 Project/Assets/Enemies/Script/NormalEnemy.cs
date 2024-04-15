@@ -13,4 +13,8 @@ public class NormalEnemy : MonoBehaviour
         wagon = FindObjectOfType<WagonMovement>();
         AIDestinationSetter.target = wagon.transform;
     }
+    public void DestroyMe(float time)
+    {
+        Destroy(gameObject, time);
+    }
 }

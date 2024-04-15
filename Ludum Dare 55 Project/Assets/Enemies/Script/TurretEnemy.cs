@@ -40,9 +40,13 @@ public class TurretEnemy : MonoBehaviour
         Instantiate(projectile, transform.position, Quaternion.identity);
         recharge = false;
     }
-    public  void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radius);
+    }
+    public void DestroyMe(float time)
+    {
+        Destroy(gameObject, time);
     }
 }
