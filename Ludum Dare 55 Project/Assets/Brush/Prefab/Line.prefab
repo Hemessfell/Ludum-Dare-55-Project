@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 8375878882255537546}
   edgeCollider: {fileID: -5292819172273896264}
+  brushManager: {fileID: 0}
 --- !u!120 &8375878882255537546
 LineRenderer:
   serializedVersion: 2
