@@ -46,9 +46,9 @@ public class BrushManager : MonoBehaviour
         {
 
             case States.Green:
-                if (Input.GetMouseButton(0))
+                if (Input.GetMouseButton(0) && !mana.reachedZero)
                     SpawnWall();
-                if (Input.GetMouseButtonUp(0) && wallList.Count > 0)
+                if (Input.GetMouseButtonUp(0) && wallList.Count > 0 && !mana.reachedZero)
                     StartCoroutine(ActiveWall());
                 return;
 

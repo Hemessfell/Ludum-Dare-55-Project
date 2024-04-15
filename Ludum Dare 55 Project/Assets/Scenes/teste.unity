@@ -474,7 +474,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 215
+    m_Bits: 3031
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 830b304c39abd2041969a3b4e6e3e6ef, type: 2}
   m_TargetDisplay: 0
@@ -1449,6 +1449,14 @@ PrefabInstance:
     - target: {fileID: 6184120883007472664, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
       propertyPath: m_Name
       value: Wagon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184120883007472664, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990063298282483068, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8707479676391515927, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -8,7 +8,7 @@ public class ManaFill : MonoBehaviour
     [SerializeField, Range(0, 1)] private float manaAmmount;
 
     private float initialHeight;
-    private bool reachedZero;
+    public bool reachedZero;
 
     private void Awake()
     {
