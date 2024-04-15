@@ -99,10 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 603cf90e6b633b247a1bf56e7c1dcc5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootInterval: 2
-  radius: 22.14
+  shootInterval: 3
+  radius: 15
   projectile: {fileID: 881881306115855712, guid: 75c994f555a94cb419d327b545d9be0b, type: 3}
-  circleCollider2D: {fileID: 0}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
