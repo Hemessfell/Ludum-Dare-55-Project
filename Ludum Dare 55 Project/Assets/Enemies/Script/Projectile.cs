@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     private WagonMovement target ;
     [SerializeField] private float force;
+    [SerializeField] private GameObject damageDealer;
 
     private void Awake()
     {
@@ -25,10 +26,11 @@ public class Projectile : MonoBehaviour
         direction.Normalize();
         rb.AddForce(direction * force);
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Wagon") || other.gameObject.layer == 6)
         {
+            Instantiate(damageDealer, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

@@ -13,6 +13,7 @@ public class DamageDealer : MonoBehaviour
        if(wagon)
        {
             wagon.DecreaseLife(damage);
+            Destroy(gameObject);
        }
     }
 }

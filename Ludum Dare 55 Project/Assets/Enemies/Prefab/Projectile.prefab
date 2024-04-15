@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 66814712124014975}
   force: 200
+  damageDealer: {fileID: 7842520855813915700, guid: 1043e5cc919331c4c86a14b5690836f1, type: 3}
 --- !u!50 &66814712124014975
 Rigidbody2D:
   serializedVersion: 4
@@ -105,7 +106,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
