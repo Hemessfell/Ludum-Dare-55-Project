@@ -44,23 +44,10 @@ public class LineBrushShaderControl : MonoBehaviour
             if(!started)
             {
                 StartCoroutine(TimeToStartFading());
-                //StartCoroutine(RemovePoints());
             }
         }
 
     }
-
-    /*private IEnumerator RemovePoints()
-    {
-        List<Vector2> points = new List<Vector2>();
-        points = edgeCollider.points;
-        for (int i = 0;i < edgeCollider.pointCount;i++)
-        {
-            points.RemoveRange(i,i);
-            edgeCollider.points = points.ToArray();
-            yield return new WaitForSeconds(1.65f / edgeCollider.pointCount);
-        }
-    }*/
     private IEnumerator TimeToStartFading()
     {
         started = true;
