@@ -511,7 +511,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3031
+    m_Bits: 2263
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 830b304c39abd2041969a3b4e6e3e6ef, type: 2}
   m_TargetDisplay: 0
@@ -713,7 +713,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 288
+    m_Bits: 800
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: e3828ccf303eda240ab1a9b5dd2c214f, type: 2}
   m_TargetDisplay: 0
@@ -2296,6 +2296,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2053591802256938112, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2.4996948
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680126913580852806, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680126913580852806, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5680126913580852806, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6184120883007472664, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
       propertyPath: m_Name
       value: Wagon
@@ -2346,6 +2362,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8707479676391515927, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144050150134408098, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9144050150134408098, guid: 31f6e8eb76d360b4abed12231c03a03a, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
