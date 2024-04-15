@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c6baea158ef34c46a71dd4abc37194e
+guid: 503e99471fc4a2049ac6f8f819439e56
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fogo_0
+      name: fireSpawning_0
       rect:
         serializedVersion: 2
         x: 6
@@ -111,29 +111,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47957c2e717067641b44cd60beb2b577
-      internalID: -1725666619
+      spriteID: eace8ac5664c77341bb3f454782fef3b
+      internalID: 152357962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fogo_1
+      name: fireSpawning_1
       rect:
         serializedVersion: 2
         x: 18
         y: 4
         width: 12
-        height: 9
+        height: 12
       alignment: 9
-      pivot: {x: 0.5, y: 0.44444445}
+      pivot: {x: 0.5, y: 0.33333334}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb5e8084658b8b54fbfe7aa286173603
-      internalID: 254195745
+      spriteID: 16dfeb0e0a01a2e4780b936739e9458b
+      internalID: -1317981179
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      fogo_0: -1725666619
-      fogo_1: 254195745
+      fireSpawning_0: 152357962
+      fireSpawning_1: -1317981179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

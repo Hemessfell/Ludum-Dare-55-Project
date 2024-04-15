@@ -9,10 +9,11 @@ using UnityEngine.UI;
 public class BrushManager : MonoBehaviour
 {
     [SerializeField] private Line line;
-    [SerializeField] private GameObject wall, lightining;
+    [SerializeField] private GameObject wall, lightining,fire;
     private List<GameObject> wallList = new List<GameObject>();
+    private List<GameObject> fireList = new List<GameObject>();
     private List<RaycastHit2D> enemyList = new List<RaycastHit2D>();
-    [SerializeField] private LayerMask whatIsObstacle, whatIsEnemy;
+    [SerializeField] private LayerMask whatIsObstacle, whatIsEnemy,whereToFire;
     [SerializeField] private float greenMana, redMana, yellowMana, radius;
     public enum States { Green, Red, Yellow }
     private Image manaColor;
@@ -56,15 +57,23 @@ public class BrushManager : MonoBehaviour
             case States.Green:
                 if (Input.GetMouseButton(0))
                     SpawnWall();
+
                 if (Input.GetMouseButtonUp(0))
                     StartCoroutine(ActiveWall());
                 return;
 
             case States.Red:
+                if(Input.GetMouseButton(0))
+                    SpawnFire();
+
+                if(Input.GetMouseButtonUp(0))
+                    StartCoroutine(ActivateFire());
+
                 return;
             case States.Yellow:
                 if (Input.GetMouseButton(0))
                     MarkEnemy();
+
                 if (Input.GetMouseButtonUp(0))
                     StartCoroutine(CastLightning());
                 return;
@@ -105,7 +114,6 @@ public class BrushManager : MonoBehaviour
         isPaiting = true;
         if (!_hit && !mana.reachedZero)
         {
-            Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
             mana.DecreaseMana(greenMana);
             GameObject _temp = Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
             wallList.Add(_temp);
@@ -133,26 +141,25 @@ public class BrushManager : MonoBehaviour
     {
         Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D _hit;
-        _hit = Physics2D.BoxCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), new Vector2(1, 0.625f), 0, Vector2.down, 0.1f, whatIsObstacle);
+        _hit = Physics2D.CircleCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), 0.5f, Vector2.down, 0.1f, whereToFire);
         isPaiting = true;
         if (!_hit && !mana.reachedZero)
         {
-            Instantiate(wall, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, transform);
-            mana.DecreaseMana(greenMana);
-            GameObject _temp = Instantiate(wall, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, transform);
-            wallList.Add(_temp);
+            mana.DecreaseMana(redMana);
+            GameObject _temp = Instantiate(fire, new Vector3(_mousePosition.x, _mousePosition.y, 0), Quaternion.identity, transform);
+            fireList.Add(_temp);
         }
     }
 
     private IEnumerator ActivateFire()
     {
-        for (int i = 0; i < wallList.Count; i++)
+        for (int i = 0; i < fireList.Count; i++)
         {
-            wallList[i].transform.GetChild(0).gameObject.SetActive(true);
-            AstarPath.UpdateGraph();
+            fireList[i].transform.GetChild(0).gameObject.SetActive(true);
+            fireList[i].transform.GetChild(1).gameObject.transform.DOScale(new Vector3(0, 0, 0), 1);
             yield return new WaitForSeconds(0.05f);
         }
-        wallList.Clear();
+        fireList.Clear();
         isPaiting = false;
     }
 

@@ -64,12 +64,16 @@ MonoBehaviour:
   line: {fileID: 438635264896121220, guid: ed5c276a3e2c51948a59b243d58c2561, type: 3}
   wall: {fileID: 6098439462553284387, guid: b87a3f30f7f5ebb4a9a0ef2c4b0d51c1, type: 3}
   lightining: {fileID: 5567728445764771939, guid: 11e2b3bbdc690e94ea423a05d9aaa10a, type: 3}
+  fire: {fileID: 3820301366107319512, guid: 4e49f23135154e64c8b83ca27548d8e0, type: 3}
   whatIsObstacle:
     serializedVersion: 2
     m_Bits: 1344
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
+  whereToFire:
+    serializedVersion: 2
+    m_Bits: 1024
   greenMana: 0.03
   redMana: 0.02
   yellowMana: 0.06
