@@ -474,7 +474,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 471
+    m_Bits: 215
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 830b304c39abd2041969a3b4e6e3e6ef, type: 2}
   m_TargetDisplay: 0
@@ -739,7 +739,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32
+    m_Bits: 288
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: e3828ccf303eda240ab1a9b5dd2c214f, type: 2}
   m_TargetDisplay: 0
@@ -1802,7 +1802,7 @@ GameObject:
   - component: {fileID: 1985587055}
   - component: {fileID: 1985587056}
   - component: {fileID: 1985587057}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Wagon
   m_TagString: Wagon
   m_Icon: {fileID: 0}
