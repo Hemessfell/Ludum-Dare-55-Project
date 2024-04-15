@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class BrushManager : MonoBehaviour
 {
-    public enum States { Green, Red, Yellow }
     [SerializeField] private Line line;
-    [SerializeField] private GameObject wall;
+    [SerializeField] private GameObject wall, lightining;
     [SerializeField] private List<GameObject> wallList = new List<GameObject>();
     [SerializeField] private LayerMask whatIsObstacle;
     [SerializeField] private float greenMana, redMana, yellowMana;
+    public enum States { Green, Red, Yellow }
     private Image manaColor;
     private LineRenderer lineRenderer;
-    private States myState;
+    public States myState { get; private set; }
 
     [SerializeField] private ManaFill mana;
     private void Awake()
@@ -40,7 +40,9 @@ public class BrushManager : MonoBehaviour
             SwitchState(States.Yellow);
         }
         if (Input.GetKeyDown(KeyCode.E))
+        {
             SwitchState(States.Red);
+        }
 
         switch (myState)
         {
@@ -48,7 +50,7 @@ public class BrushManager : MonoBehaviour
             case States.Green:
                 if (Input.GetMouseButton(0) && !mana.reachedZero)
                     SpawnWall();
-                if (Input.GetMouseButtonUp(0) && wallList.Count > 0 && !mana.reachedZero)
+                if (Input.GetMouseButtonUp(0)  && !mana.reachedZero)
                     StartCoroutine(ActiveWall());
                 return;
 
@@ -59,34 +61,6 @@ public class BrushManager : MonoBehaviour
 
         }
     }
-
-    private void SpawnWall()
-    {
-        Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D _hit;
-        _hit = Physics2D.BoxCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), new Vector2(1, 0.625f), 0, Vector2.down, 0.1f, whatIsObstacle);
-
-        if (!_hit)
-        {
-            Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
-            mana.DecreaseMana(greenMana);
-            //Instantiate(wall, new Vector3(Mathf.FloorToInt(mousePosition.x) + 0.5f, Mathf.RoundToInt(mousePosition.y), 0), Quaternion.identity, transform);
-            GameObject _temp = Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
-            wallList.Add(_temp);
-        }
-    }
-
-    private IEnumerator ActiveWall()
-    {
-            for (int i = 0; i < wallList.Count; i++)
-            {
-
-                wallList[i].transform.GetChild(0).gameObject.SetActive(true);
-                yield return new WaitForSeconds(0.05f);
-            }
-            wallList.Clear();
-    }
-
     private void SwitchState(States newState)
     {
         myState = newState;
@@ -110,5 +84,51 @@ public class BrushManager : MonoBehaviour
             lineRenderer.endColor = new Color(0.9960785f, 0.9058824f, 0.3803922f);
         }
     }
+
+    #region Green Brush
+
+    private void SpawnWall()
+    {
+        Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D _hit;
+        _hit = Physics2D.BoxCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), new Vector2(1, 0.625f), 0, Vector2.down, 0.1f, whatIsObstacle);
+
+        if (!_hit)
+        {
+            Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
+            mana.DecreaseMana(greenMana);
+            //Instantiate(wall, new Vector3(Mathf.FloorToInt(mousePosition.x) + 0.5f, Mathf.RoundToInt(mousePosition.y), 0), Quaternion.identity, transform);
+            GameObject _temp = Instantiate(wall,new Vector3 (_mousePosition.x, _mousePosition.y,0),Quaternion.identity,transform);
+            wallList.Add(_temp);
+        }
+    }
+
+    private IEnumerator ActiveWall()
+    {
+            for (int i = 0; i < wallList.Count; i++)
+            {
+                wallList[i].transform.GetChild(0).gameObject.SetActive(true);
+                AstarPath.UpdateGraph();
+                yield return new WaitForSeconds(0.05f);
+            }
+            wallList.Clear();
+    }
+
+    #endregion
+
+    #region RedBrush
+
+
+
+    #endregion
+
+    #region YellowBrush
+
+    public void MarkEnemy(Transform transform)
+    {
+        Instantiate(lightining, transform.position, Quaternion.identity, transform);
+    }
+
+    #endregion
 
 }

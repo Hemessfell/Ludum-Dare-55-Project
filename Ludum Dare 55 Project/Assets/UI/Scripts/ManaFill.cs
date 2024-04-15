@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManaFill : MonoBehaviour
 {
     [SerializeField] RectTransform rectTransform;
-    [SerializeField, Range(0, 1)] private float manaAmmount;
+    [SerializeField, Range(0, 1)] public float manaAmmount;
 
     private float initialHeight;
     public bool reachedZero;
