@@ -15,7 +15,6 @@ public class SpawnerManager : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Wagon"))
         {
-            Debug.Log("salve");
             for(int i = 0; i < spawners.Length; i++)
             {
                 StartCoroutine(spawners[i].SpawnEnemy());

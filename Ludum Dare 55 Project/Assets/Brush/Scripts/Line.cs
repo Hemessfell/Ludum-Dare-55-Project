@@ -32,11 +32,12 @@ public class Line : MonoBehaviour
         return Vector2.Distance(lineRenderer.GetPosition(lineRenderer.positionCount - 1), pos) > DrawManager.RESOLUTION;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.layer == (8) && brushManager.myState == BrushManager.States.Yellow)
+        if (other.gameObject.layer == 8 && brushManager.myState == BrushManager.States.Yellow)
         {
             brushManager.MarkEnemy(other.transform);
+            Debug.Log("alou");
         }
-    }
+    }*/
 }
