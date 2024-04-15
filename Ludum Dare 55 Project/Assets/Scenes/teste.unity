@@ -940,7 +940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1985587055}
   cam: {fileID: 225848952}
-  speed: 3
+  Speed: 0
 --- !u!212 &1985587053
 SpriteRenderer:
   m_ObjectHideFlags: 0
