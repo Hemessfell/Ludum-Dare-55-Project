@@ -58,6 +58,7 @@ public class BrushManager : MonoBehaviour
         if(!hit)
         {
             Instantiate(wall,new Vector3 (mousePosition.x, mousePosition.y,0),Quaternion.identity,transform);
+            //Instantiate(wall, new Vector3(Mathf.FloorToInt(mousePosition.x) + 0.5f, Mathf.RoundToInt(mousePosition.y), 0), Quaternion.identity, transform);
         }
     }
 

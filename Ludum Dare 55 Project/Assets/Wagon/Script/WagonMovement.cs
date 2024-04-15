@@ -5,17 +5,12 @@ using UnityEngine;
 public class WagonMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Camera cam;
 
     public float Speed;
-    void Start()
+
+    private void FixedUpdate()
     {
         rb.velocity = Vector2.right * Speed;
-        cam.transform.position = transform.position;
-    }
-
-    void Update()
-    {
-        cam.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+        //rb.position = MathExtension.PixelPerfectClamp(rb.position);
     }
 }
