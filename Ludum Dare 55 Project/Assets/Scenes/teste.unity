@@ -634,7 +634,7 @@ MonoBehaviour:
   wallList: []
   whatIsObstacle:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 1344
   greenMana: 0.03
   redMana: 0.02
   yellowMana: 0.06
