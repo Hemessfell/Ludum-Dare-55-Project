@@ -48,7 +48,7 @@ public class BrushManager : MonoBehaviour
             case States.Green:
                 if (Input.GetMouseButton(0))
                     SpawnWall();
-                if (Input.GetMouseButtonUp(0))
+                if (Input.GetMouseButtonUp(0) && wallList.Count > 0)
                     StartCoroutine(ActiveWall());
                 return;
 
@@ -78,8 +78,6 @@ public class BrushManager : MonoBehaviour
 
     private IEnumerator ActiveWall()
     {
-        if(wallList.Count > 0)
-        {
             for (int i = 0; i < wallList.Count; i++)
             {
 
@@ -87,7 +85,6 @@ public class BrushManager : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
             }
             wallList.Clear();
-        }
     }
 
     private void SwitchState(States newState)
