@@ -10,19 +10,19 @@ public class Line : MonoBehaviour
     private readonly List<Vector2> points = new List<Vector2>();
     void Start()
     {
-        edgeCollider.transform.position -= transform.position;
+        //edgeCollider.transform.position -= transform.position;
     }
 
     public void SetPostion(Vector2 pos)
     {
         if (!CanAppend(pos)) return;
 
-        points.Add(pos);
+        //points.Add(pos);
 
         lineRenderer.positionCount++;
         lineRenderer.SetPosition(lineRenderer.positionCount - 1 , pos);
 
-        edgeCollider.points = points.ToArray();
+        //edgeCollider.points = points.ToArray();
     }
     private bool CanAppend(Vector2 pos)
     {

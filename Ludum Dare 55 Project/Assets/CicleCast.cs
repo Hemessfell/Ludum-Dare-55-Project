@@ -14,6 +14,7 @@ public class CicleCast : MonoBehaviour
     private void Start()
     {
         spr.DOColor(new Color(1, 1, 1, 1), fadeTimer);
+        transform.DOScale(new Vector3(1, 1, 1), 1);
     }
     private void Update()
     {
@@ -27,6 +28,7 @@ public class CicleCast : MonoBehaviour
     {
         once = true;
         spr.DOColor(new Color(1, 1, 1, 0), fadeTimer);
+        transform.DOScale(new Vector3(0, 0, 0), 1);
         Destroy(gameObject,fadeTimer);
     }
 }
