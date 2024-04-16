@@ -118,7 +118,7 @@ TextureImporter:
         width: 16
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,22 +131,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wall Rock_1
+      name: Wall Rock_4
       rect:
         serializedVersion: 2
         x: 19
-        y: 0
-        width: 11
-        height: 10
+        y: 5
+        width: 4
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38ca1607cb21f3b4ebafcd5eddcaf95f
-      internalID: -2067384528
+      spriteID: b0fbf769fa399fb4a808e535c0510c81
+      internalID: 1581194158
       vertices: []
       indices: 
       edges: []
@@ -164,6 +164,9 @@ TextureImporter:
     nameFileIdTable:
       Wall Rock_0: -2035707383
       Wall Rock_1: -2067384528
+      Wall Rock_2: 1858801474
+      Wall Rock_3: -425434562
+      Wall Rock_4: 1581194158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

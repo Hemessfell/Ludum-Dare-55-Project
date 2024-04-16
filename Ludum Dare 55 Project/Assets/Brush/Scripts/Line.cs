@@ -8,11 +8,6 @@ public class Line : MonoBehaviour
     [SerializeField] private BrushManager brushManager;
 
     private readonly List<Vector2> points = new List<Vector2>();
-    void Start()
-    {
-        //edgeCollider.transform.position -= transform.position;
-    }
-
     public void SetPostion(Vector2 pos)
     {
         if (!CanAppend(pos)) return;
@@ -31,13 +26,4 @@ public class Line : MonoBehaviour
 
         return Vector2.Distance(lineRenderer.GetPosition(lineRenderer.positionCount - 1), pos) > DrawManager.RESOLUTION;
     }
-
-    /*private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer == 8 && brushManager.myState == BrushManager.States.Yellow)
-        {
-            brushManager.MarkEnemy(other.transform);
-            Debug.Log("alou");
-        }
-    }*/
 }

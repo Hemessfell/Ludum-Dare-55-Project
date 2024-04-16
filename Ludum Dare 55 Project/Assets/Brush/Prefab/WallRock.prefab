@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6462753231496976462}
   - component: {fileID: 7140419300435273477}
   - component: {fileID: 3562758386299698447}
+  - component: {fileID: -3653001708625215682}
   m_Layer: 6
   m_Name: WallRock
   m_TagString: Untagged
@@ -180,3 +181,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-3653001708625215682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236383180735172475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6878596e62d05794083a7506e79c51fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDestroy: 1
+  gore: {fileID: 2489844572419598157, guid: cb12283ea866b7b4889511ef057777ec, type: 3}

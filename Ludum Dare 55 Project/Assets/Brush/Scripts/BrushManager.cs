@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -141,7 +142,7 @@ public class BrushManager : MonoBehaviour
     {
         Vector3 _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D _hit;
-        _hit = Physics2D.CircleCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), 0.5f, Vector2.down, 0.1f, whereToFire);
+        _hit = Physics2D.CircleCast(new Vector3(_mousePosition.x, _mousePosition.y, 0), 0.3f, Vector2.down, 0.1f, whereToFire);
         isPaiting = true;
         if (!_hit && !mana.reachedZero)
         {
