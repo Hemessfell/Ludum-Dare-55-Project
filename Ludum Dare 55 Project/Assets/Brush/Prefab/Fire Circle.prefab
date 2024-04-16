@@ -282,6 +282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDestroy: 10
+  gore: {fileID: 2489844572419598157, guid: 440720f6d6a823646ac8bf2085a77400, type: 3}
+  parent: {fileID: 6046186321241471338}
 --- !u!1 &3820301366107319512
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8081889793095564100}
   - component: {fileID: 5869774344306010677}
+  - component: {fileID: 6046186321241471338}
   m_Layer: 10
   m_Name: Fire Circle
   m_TagString: Untagged
@@ -351,3 +354,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &6046186321241471338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820301366107319512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eafc4020f8fb1948ba7aebf139b2b97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

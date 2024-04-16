@@ -6,9 +6,10 @@ public class DestroyAfterSeconds : MonoBehaviour
 {
     [SerializeField] private float timeToDestroy;
     [SerializeField] private GameObject gore;
+    [SerializeField] private DestroyParent parent;
     private void OnEnable()
     {
-        Destroy(gameObject, timeToDestroy);
+        parent.DestroyMe(timeToDestroy);
     }
     private void OnDestroy()
     {
