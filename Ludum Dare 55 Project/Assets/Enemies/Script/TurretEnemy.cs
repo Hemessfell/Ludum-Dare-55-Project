@@ -5,9 +5,11 @@ using UnityEngine;
 public class TurretEnemy : MonoBehaviour
 {
     [SerializeField] private float shootInterval, radius;
+    [SerializeField] private float timetoKill, inFireTimer;
     [SerializeField] private GameObject projectile;
     [SerializeField] private GameObject damageDealer;
     private bool recharge,isplayerIn;
+        [SerializeField] private bool insideFire;
     private Coroutine coroutine;
     [SerializeField] private LayerMask whatIsPlayer;
 
@@ -31,21 +33,17 @@ public class TurretEnemy : MonoBehaviour
             Instantiate(damageDealer, transform.position, Quaternion.identity);
             DestroyMe(0.0f);
         }
+
+        if (insideFire)
+        {
+            inFireTimer += Time.deltaTime;
+        }
+
+        if (inFireTimer >= timetoKill)
+        {
+            DestroyMe(0.0f);
+        }
     }
-    /*  private void OnTriggerStay2D(Collider2D other)
-      {
-          if (other.gameObject.CompareTag("Wagon") && !recharge)
-          {
-              coroutine = StartCoroutine(Shoot());
-          }
-      }
-      private void OnTriggerExit2D(Collider2D other)
-      {
-          if (other.gameObject.CompareTag("Wagon")) 
-          {
-              StopCoroutine(coroutine);
-          }
-      }*/
 
     private IEnumerator Shoot()
     {
@@ -62,5 +60,20 @@ public class TurretEnemy : MonoBehaviour
     public void DestroyMe(float time)
     {
         Destroy(gameObject, time);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            insideFire = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Fire"))
+        {
+            insideFire = false;
+        }
     }
 }

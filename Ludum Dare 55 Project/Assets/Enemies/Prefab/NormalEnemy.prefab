@@ -5177,10 +5177,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaa428afae8b949b67f30018d5ebb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timetoKill: 3
+  timetoKill: 1.5
   inFireTimer: 0
   AIDestinationSetter: {fileID: 6959487962833217403}
   insideFire: 0
+  damageDealer: {fileID: 7842520855813915700, guid: 1043e5cc919331c4c86a14b5690836f1, type: 3}
 --- !u!114 &-762072221122957
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ public class NormalEnemy : MonoBehaviour
     [SerializeField] private float timetoKill,inFireTimer;
     [SerializeField] AIDestinationSetter AIDestinationSetter;
     [SerializeField] private bool insideFire;
+    [SerializeField] private GameObject damageDealer;
+
     private void Awake()
     {
         wagon = FindObjectOfType<WagonMovement>();
@@ -24,7 +26,13 @@ public class NormalEnemy : MonoBehaviour
         }
         if(inFireTimer >= timetoKill)
         {
-            Debug.Log("morreu");
+            DestroyMe(0.0f);
+        }
+
+        if (Vector2.Distance(transform.position, wagon.transform.position) < 1.0f)
+        {
+            Instantiate(damageDealer, transform.position, Quaternion.identity);
+            DestroyMe(0.0f);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

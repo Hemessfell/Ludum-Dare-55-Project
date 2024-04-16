@@ -105,8 +105,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootInterval: 3
   radius: 15
+  timetoKill: 1.5
+  inFireTimer: 0
   projectile: {fileID: 881881306115855712, guid: 75c994f555a94cb419d327b545d9be0b, type: 3}
   damageDealer: {fileID: 7842520855813915700, guid: 1043e5cc919331c4c86a14b5690836f1, type: 3}
+  insideFire: 0
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 512
