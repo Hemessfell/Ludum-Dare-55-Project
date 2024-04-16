@@ -193,5 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6878596e62d05794083a7506e79c51fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDestroy: 1
+  timeToDestroy: 10
   gore: {fileID: 2489844572419598157, guid: cb12283ea866b7b4889511ef057777ec, type: 3}
+  parent: {fileID: 0}
